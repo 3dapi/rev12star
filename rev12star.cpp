@@ -22,6 +22,7 @@ LRESULT WINAPI WndProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam );
 
 INT Create( HINSTANCE hInst)
 {
+	char* leak_ptr = new char[40000]{};
 	m_hInst	= hInst;
 	WNDCLASS wc
 	{
